@@ -1,0 +1,83 @@
+[
+	{
+		"id" : 11,
+		"title" : "Final Diagnosis",
+		"year" : 1959,
+		"tags" : ["medicine"],
+		"author" : { "firstname" : "Arthur", "lastname" : "Hailey", "country" : "GBP" }
+	},
+	{
+		"id" : 13,
+		"title" : "Airport",
+		"year" : 1968,
+		"tags" : ["airplanes"],
+		"author" : { "firstname" : "Arthur", "lastname" : "Hailey", "country" : "GBP" }
+	},
+	{
+		"id" : 14,
+		"title" : "Wheels",
+		"year" : 1971,
+		"tags" : ["cars", "business"],
+		"author" : { "firstname" : "Arthur", "lastname" : "Hailey", "country" : "GBP" }
+	},
+
+	{
+		"id" : 21,
+		"title" : "A Farewell to Arms",
+		"year" : 1929,
+		"tags" : ["war", "love"],
+		"author" : { "firstname" : "Ernest", "lastname" : "Hemingway", "country" : "USA" }
+	},
+	{
+		"id" : 22,
+		"title" : "The Old Man and the Sea",
+		"tags" : ["ocean"],
+		"year" : 1952,
+		"author" : { "firstname" : "Ernest", "lastname" : "Hemingway", "country" : "USA" }
+	},
+
+	{
+		"id" : 31,
+		"title" : "Dune",
+		"year" : 1965,
+		"tags" : ["space", "planet", "future", "love", "war"],
+		"author" : { "firstname" : "Frank", "lastname" : "Herbert", "country" : "USA" }
+	},
+	{
+		"id" : 33,
+		"title" : "Children of Dune",
+		"year" : 1976,
+		"tags" : ["space", "planet", "future"],
+		"author" : { "firstname" : "Frank", "lastname" : "Herbert", "country" : "USA" }
+	},
+
+	{
+		"id" : 41,
+		"title" : "Dubliners",
+		"year" : 1914,
+		"tags" : ["war"],
+		"author" : { "firstname" : "James", "lastname" : "Joyce", "country" : "IRL" }
+	},
+	{
+		"id" : 42,
+		"title" : "Ulysses",
+		"year" : 1922,
+		"author" : { "firstname" : "James", "lastname" : "Joyce", "country" : "IRL" }
+	},
+
+	{
+		"id" : 51,
+		"title" : "The Andromeda Strain",
+		"year" : 1969,
+		"tags" : ["space", "infection", "future", "aliens"],
+		"author" : { "firstname" : "Michael", "lastname" : "Crichton", "country" : "USA" }
+	},
+	{
+		"id" : 54,
+		"title" : "Jurassicpark",
+		"year" : 1990,
+		"tags" : ["dinosaurs"],
+		"author" : { "firstname" : "Michael", "lastname" : "Crichton", "country" : "USA" }
+	}
+
+]
