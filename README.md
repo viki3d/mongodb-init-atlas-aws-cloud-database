@@ -1,4 +1,4 @@
-# mongodb-init-altas-aws-cloud-database
+# mongodb-init-atlas-aws-cloud-database
 MongoDB, Atlas-on-AWS-Cloud, Java, Maven, Jackson, Log4j2
 
 ![11](/11-mongodb-logo.png?v=2 "mongodb logo")  
