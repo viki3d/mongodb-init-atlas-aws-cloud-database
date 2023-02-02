@@ -4,7 +4,7 @@ MongoDB, Atlas-on-AWS-Cloud, Java, Maven, Jackson, Log4j2
 ![10](/10-mongodb-logo.png?v=1 "mongodb logo")  
 
 ### Overview  
-c
+![00](/00-init-mongodb.png?v=1 "init mongodb")
 
 ### Setting up MongoDB Atlas Cloud  
 - create new project  
