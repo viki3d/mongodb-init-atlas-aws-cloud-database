@@ -4,6 +4,7 @@ MongoDB, Atlas-on-AWS-Cloud, Java, Maven, Jackson, Log4j2
 ![11](/11-mongodb-logo.png?v=2 "mongodb logo")  
 
 ### Overview  
+With this app  we are initializating the mongodb into the cloud with our JSON data.  
 ![00](/00-init-mongodb.png?v=1 "init mongodb")
 
 ### Setting up MongoDB Atlas Cloud  
