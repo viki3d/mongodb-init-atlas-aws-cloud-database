@@ -28,7 +28,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Initialize the MongoDB Atlas Cloud database with data (from JSON file).
+ * Initialize the MongoDB Atlas AWS Cloud database with data (from JSON file).
  *
  * @author viki3d
  */
@@ -36,13 +36,14 @@ public class InitMongoDatabase {
 
   private static Logger logger = LoggerFactory.getLogger(InitMongoDatabase.class);
 
-  private static final String CONNECTION_STRING = "mongodb+srv://username:password@atlascluster" 
-      + ".fiy6ex1.mongodb.net/?retryWrites=true&w=majority";
+  private static final String CONNECTION_STRING_TEMPLATE = "mongodb+srv://username:password@cluster" 
+      + "/?retryWrites=true&w=majority";
   private static final String DATABASE_NAME = "vibookstore";
   private static final String COLLECTION_NAME = "books";
   private static final String RES_PATH = "./src/main/resources/";
   private static final String BOOKS_JSON_FILE = RES_PATH + "books.json";
   private static final String CREDENTIALS_PROPERTIES = RES_PATH + "credentials.properties";
+  private static final String PROPERTIES_KEY_CLUSTER = "cluster";
   private static final String PROPERTIES_KEY_USERNAME = "username";
   private static final String PROPERTIES_KEY_PASSWORD = "password";
 
@@ -52,29 +53,27 @@ public class InitMongoDatabase {
    * @param args Command line args
    */
   public static void main(String[] args) {
-    // Set the actual 'username' and 'password' in the connection string:
-    String connectionStringWithActualUsernameAndPassword = CONNECTION_STRING;
+    // Set the actual 'cluster', 'username' and 'password' in the connection string template:
+    String connectionString = CONNECTION_STRING_TEMPLATE;
     try (InputStream input = Files.newInputStream(Paths.get(CREDENTIALS_PROPERTIES))) {
-      // Read actual values from .properties file
+      // Read actual values from the .properties file
       Properties properties = new Properties();
       properties.load(input);
+      String cluster = properties.getProperty(PROPERTIES_KEY_CLUSTER);
       String username = properties.getProperty(PROPERTIES_KEY_USERNAME);
       String password = properties.getProperty(PROPERTIES_KEY_PASSWORD);
-      connectionStringWithActualUsernameAndPassword = 
-        connectionStringWithActualUsernameAndPassword.replace(PROPERTIES_KEY_USERNAME, username);
-      connectionStringWithActualUsernameAndPassword = 
-        connectionStringWithActualUsernameAndPassword.replace(PROPERTIES_KEY_PASSWORD, password);
-      logger.debug("connectionStringWithActualUsernameAndPassword = {}", 
-          connectionStringWithActualUsernameAndPassword);
+      connectionString = connectionString.replace(PROPERTIES_KEY_CLUSTER, cluster);
+      connectionString = connectionString.replace(PROPERTIES_KEY_USERNAME, username);
+      connectionString = connectionString.replace(PROPERTIES_KEY_PASSWORD, password);
+      logger.debug("connectionString = {}", connectionString);
     } catch (IOException ex) {
       ex.printStackTrace();
     }
 
     // Prepare the MongoDB ConnectionString, used for the connection:
-    ConnectionString connectionString = new ConnectionString(
-        connectionStringWithActualUsernameAndPassword);
+    ConnectionString mongoConnectionString = new ConnectionString(connectionString);
     MongoClientSettings settings = MongoClientSettings.builder()
-        .applyConnectionString(connectionString)
+        .applyConnectionString(mongoConnectionString)
         .serverApi(ServerApi.builder()
           .version(ServerApiVersion.V1)
           .build())
