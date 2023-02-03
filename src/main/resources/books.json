@@ -78,6 +78,20 @@
 		"year" : 1990,
 		"tags" : ["dinosaurs"],
 		"author" : { "firstname" : "Michael", "lastname" : "Crichton", "country" : "USA" }
+	},
+	{
+		"id" : 61,
+		"title" : "The Sound and the Fury",
+		"year" : 1929,
+		"tags" : ["family"],
+		"author" : { "firstname" : "William", "lastname" : "Faulkner", "country" : "USA" }
+	},
+	{
+		"id" : 71,
+		"title" : "The Buddha of Suburbia",
+		"year" : 1990,
+		"tags" : ["family"],
+		"author" : { "firstname" : "Hanif", "lastname" : "Kureishi", "country" : "GBP" }
 	}
 
 ]
