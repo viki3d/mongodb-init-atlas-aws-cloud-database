@@ -92,6 +92,13 @@
 		"year" : 1990,
 		"tags" : ["family"],
 		"author" : { "firstname" : "Hanif", "lastname" : "Kureishi", "country" : "GBP" }
+	},
+	{
+		"id" : 81,
+		"title" : "Mirage of Blaze",
+		"year" : 1990,
+		"tags" : ["family", "samurai"],
+		"author" : { "firstname" : "Mizuna", "lastname" : "Kuwabara", "country" : "JAP" }
 	}
 
 ]
